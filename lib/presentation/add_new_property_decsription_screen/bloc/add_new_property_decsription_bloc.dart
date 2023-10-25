@@ -1,0 +1,4 @@
+import 'package:equatable/equatable.dart';import 'package:flutter/material.dart';import '/core/app_export.dart';import 'package:propertymanager/presentation/add_new_property_decsription_screen/models/add_new_property_decsription_model.dart';part 'add_new_property_decsription_event.dart';part 'add_new_property_decsription_state.dart';class AddNewPropertyDecsriptionBloc extends Bloc<AddNewPropertyDecsriptionEvent, AddNewPropertyDecsriptionState> {AddNewPropertyDecsriptionBloc(AddNewPropertyDecsriptionState initialState) : super(initialState) { on<AddNewPropertyDecsriptionInitialEvent>(_onInitialize); }
+
+_onInitialize(AddNewPropertyDecsriptionInitialEvent event, Emitter<AddNewPropertyDecsriptionState> emit, ) async  { emit(state.copyWith(descriptionOneController: TextEditingController())); } 
+ }

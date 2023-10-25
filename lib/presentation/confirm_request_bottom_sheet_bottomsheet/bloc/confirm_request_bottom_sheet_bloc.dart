@@ -1,0 +1,5 @@
+import 'package:equatable/equatable.dart';import 'package:flutter/material.dart';import '/core/app_export.dart';import '../models/gridhome_item_model.dart';import 'package:propertymanager/presentation/confirm_request_bottom_sheet_bottomsheet/models/confirm_request_bottom_sheet_model.dart';part 'confirm_request_bottom_sheet_event.dart';part 'confirm_request_bottom_sheet_state.dart';class ConfirmRequestBottomSheetBloc extends Bloc<ConfirmRequestBottomSheetEvent, ConfirmRequestBottomSheetState> {ConfirmRequestBottomSheetBloc(ConfirmRequestBottomSheetState initialState) : super(initialState) { on<ConfirmRequestBottomSheetInitialEvent>(_onInitialize); }
+
+_onInitialize(ConfirmRequestBottomSheetInitialEvent event, Emitter<ConfirmRequestBottomSheetState> emit, ) async  { emit(state.copyWith(confirmRequestBottomSheetModelObj: state.confirmRequestBottomSheetModelObj?.copyWith(gridhomeItemList: fillGridhomeItemList()))); } 
+List<GridhomeItemModel> fillGridhomeItemList() { return List.generate(4, (index) => GridhomeItemModel()); } 
+ }

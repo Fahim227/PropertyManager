@@ -1,0 +1,3 @@
+class HomeAlarmItemModel {String? id = "";
+
+ }

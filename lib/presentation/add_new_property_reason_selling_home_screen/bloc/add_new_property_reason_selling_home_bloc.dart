@@ -1,0 +1,10 @@
+import 'package:equatable/equatable.dart';import 'package:flutter/material.dart';import '/core/app_export.dart';import 'package:propertymanager/presentation/add_new_property_reason_selling_home_screen/models/add_new_property_reason_selling_home_model.dart';part 'add_new_property_reason_selling_home_event.dart';part 'add_new_property_reason_selling_home_state.dart';class AddNewPropertyReasonSellingHomeBloc extends Bloc<AddNewPropertyReasonSellingHomeEvent, AddNewPropertyReasonSellingHomeState> {AddNewPropertyReasonSellingHomeBloc(AddNewPropertyReasonSellingHomeState initialState) : super(initialState) { on<AddNewPropertyReasonSellingHomeInitialEvent>(_onInitialize); on<ChangeCheckBoxEvent>(_changeCheckBox); on<ChangeCheckBox1Event>(_changeCheckBox1); on<ChangeCheckBox2Event>(_changeCheckBox2); on<ChangeCheckBox3Event>(_changeCheckBox3); on<ChangeCheckBox4Event>(_changeCheckBox4); on<ChangeCheckBox5Event>(_changeCheckBox5); }
+
+_changeCheckBox(ChangeCheckBoxEvent event, Emitter<AddNewPropertyReasonSellingHomeState> emit, ) { emit(state.copyWith(isCheckbox: event.value)); } 
+_changeCheckBox1(ChangeCheckBox1Event event, Emitter<AddNewPropertyReasonSellingHomeState> emit, ) { emit(state.copyWith(isCheckbox1: event.value)); } 
+_changeCheckBox2(ChangeCheckBox2Event event, Emitter<AddNewPropertyReasonSellingHomeState> emit, ) { emit(state.copyWith(isCheckbox2: event.value)); } 
+_changeCheckBox3(ChangeCheckBox3Event event, Emitter<AddNewPropertyReasonSellingHomeState> emit, ) { emit(state.copyWith(isCheckbox3: event.value)); } 
+_changeCheckBox4(ChangeCheckBox4Event event, Emitter<AddNewPropertyReasonSellingHomeState> emit, ) { emit(state.copyWith(isCheckbox4: event.value)); } 
+_changeCheckBox5(ChangeCheckBox5Event event, Emitter<AddNewPropertyReasonSellingHomeState> emit, ) { emit(state.copyWith(isCheckbox5: event.value)); } 
+_onInitialize(AddNewPropertyReasonSellingHomeInitialEvent event, Emitter<AddNewPropertyReasonSellingHomeState> emit, ) async  { emit(state.copyWith(isCheckbox: false, isCheckbox1: false, isCheckbox2: false, isCheckbox3: false, isCheckbox4: false, isCheckbox5: false)); } 
+ }

@@ -1,0 +1,3 @@
+class SliderarrowleftItemModel {String? id = "";
+
+ }
