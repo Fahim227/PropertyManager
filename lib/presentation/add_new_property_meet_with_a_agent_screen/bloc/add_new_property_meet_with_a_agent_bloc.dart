@@ -1,0 +1,6 @@
+import 'package:equatable/equatable.dart';import 'package:flutter/material.dart';import '/core/app_export.dart';import '../models/dates_item_model.dart';import '../models/time_item_model.dart';import 'package:propertymanager/presentation/add_new_property_meet_with_a_agent_screen/models/add_new_property_meet_with_a_agent_model.dart';part 'add_new_property_meet_with_a_agent_event.dart';part 'add_new_property_meet_with_a_agent_state.dart';class AddNewPropertyMeetWithAAgentBloc extends Bloc<AddNewPropertyMeetWithAAgentEvent, AddNewPropertyMeetWithAAgentState> {AddNewPropertyMeetWithAAgentBloc(AddNewPropertyMeetWithAAgentState initialState) : super(initialState) { on<AddNewPropertyMeetWithAAgentInitialEvent>(_onInitialize); }
+
+_onInitialize(AddNewPropertyMeetWithAAgentInitialEvent event, Emitter<AddNewPropertyMeetWithAAgentState> emit, ) async  { emit(state.copyWith(addNewPropertyMeetWithAAgentModelObj: state.addNewPropertyMeetWithAAgentModelObj?.copyWith(datesItemList: fillDatesItemList(), timeItemList: fillTimeItemList()))); } 
+List<DatesItemModel> fillDatesItemList() { return List.generate(4, (index) => DatesItemModel()); } 
+List<TimeItemModel> fillTimeItemList() { return List.generate(4, (index) => TimeItemModel()); } 
+ }

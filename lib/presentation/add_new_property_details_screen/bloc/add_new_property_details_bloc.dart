@@ -1,0 +1,5 @@
+import 'package:equatable/equatable.dart';import 'package:flutter/material.dart';import '/core/app_export.dart';import '../models/listestimateprice_item_model.dart';import 'package:propertymanager/presentation/add_new_property_details_screen/models/add_new_property_details_model.dart';part 'add_new_property_details_event.dart';part 'add_new_property_details_state.dart';class AddNewPropertyDetailsBloc extends Bloc<AddNewPropertyDetailsEvent, AddNewPropertyDetailsState> {AddNewPropertyDetailsBloc(AddNewPropertyDetailsState initialState) : super(initialState) { on<AddNewPropertyDetailsInitialEvent>(_onInitialize); }
+
+_onInitialize(AddNewPropertyDetailsInitialEvent event, Emitter<AddNewPropertyDetailsState> emit, ) async  { emit(state.copyWith(addNewPropertyDetailsModelObj: state.addNewPropertyDetailsModelObj?.copyWith(listestimatepriceItemList: fillListestimatepriceItemList()))); } 
+List<ListestimatepriceItemModel> fillListestimatepriceItemList() { return List.generate(3, (index) => ListestimatepriceItemModel()); } 
+ }

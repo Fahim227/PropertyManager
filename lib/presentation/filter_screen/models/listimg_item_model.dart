@@ -1,0 +1,3 @@
+class ListimgItemModel {String? id = "";
+
+ }
